@@ -6,6 +6,7 @@ import (
 	"log"
 	"os/exec"
 	"regexp"
+	"sort"
 	"strconv"
 )
 
@@ -15,6 +16,12 @@ type Process struct {
 	time string
 	cmd  string
 }
+
+type ByTime []*Process
+
+func (a ByTime) Len() int           { return len(a) }
+func (a ByTime) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a ByTime) Less(i, j int) bool { return a[i].time < a[j].time }
 
 func PsOutput() string {
 	cmd := exec.Command("ps")
@@ -54,6 +61,7 @@ func PrintProcesses(procs []*Process) string {
 
 func main() {
 	processes := ParseOutput(PsOutput())
+	sort.Sort(ByTime(processes))
 	fmt.Println(PrintProcesses(processes))
 	fmt.Printf("Number processes: %d", len(processes))
 }
