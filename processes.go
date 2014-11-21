@@ -1,4 +1,4 @@
-package main
+package processes
 
 import (
 	"bytes"
@@ -6,7 +6,6 @@ import (
 	"log"
 	"os/exec"
 	"regexp"
-	"sort"
 	"strconv"
 )
 
@@ -57,11 +56,4 @@ func PrintProcesses(procs []*Process) string {
 		buffer.WriteString(fmt.Sprintf("%s: %s\n", proc.time, proc.cmd))
 	}
 	return buffer.String()
-}
-
-func main() {
-	processes := ParseOutput(PsOutput())
-	sort.Sort(ByTime(processes))
-	fmt.Println(PrintProcesses(processes))
-	fmt.Printf("Number processes: %d", len(processes))
 }
