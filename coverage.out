@@ -1,0 +1,11 @@
+mode: set
+github.com/iltempo/processes/processes.go:22.37,22.54 1 1
+github.com/iltempo/processes/processes.go:23.37,23.64 1 1
+github.com/iltempo/processes/processes.go:24.37,24.69 1 1
+github.com/iltempo/processes/processes.go:27.40,33.2 5 1
+github.com/iltempo/processes/processes.go:36.60,38.33 2 1
+github.com/iltempo/processes/processes.go:44.2,47.31 4 1
+github.com/iltempo/processes/processes.go:57.2,57.18 1 1
+github.com/iltempo/processes/processes.go:38.33,40.3 1 1
+github.com/iltempo/processes/processes.go:40.3,42.3 1 1
+github.com/iltempo/processes/processes.go:47.31,56.3 3 1
