@@ -1,4 +1,4 @@
-// Package that provides a list of running processes in the system.
+// Package processes provides a list of running processes in the system.
 package processes
 
 import (
