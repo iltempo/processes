@@ -33,10 +33,10 @@ func runCommand(command string) string {
 }
 
 // OfCurrentUser provides a list of all processes of the current user.
-func OfCurrentUser(predefined_output ...string) []*Process {
+func OfCurrentUser(predefinedOutput ...string) []*Process {
 	var output string
-	if len(predefined_output) >= 1 {
-		output = predefined_output[0]
+	if len(predefinedOutput) >= 1 {
+		output = predefinedOutput[0]
 	} else {
 		output = runCommand("ps")
 	}
